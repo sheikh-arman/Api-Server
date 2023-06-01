@@ -11,5 +11,5 @@ spec:
       nodePort: {{ .Values.service.nodePort }}
   selector:
     {{- range $key, $value:= .Values.matchLabels }}
-    {{ $key }}: {{ $value }}
-    {{- end }}
+      {{ $key }}: {{ $value }}
+      {{- end }}
